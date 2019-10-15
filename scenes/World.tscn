@@ -11,7 +11,7 @@
 [node name="World" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 44, 92 )
+position = Vector2( 44, 86 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 2 )
@@ -67,10 +67,16 @@ position = Vector2( 1040, 1008 )
 scale = Vector2( 2, 2 )
 destination = Vector2( 1032, 1096 )
 
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.196078, 0.196078, 0.196078, 1 )
+
 [node name="Keys" type="Node2D" parent="."]
+light_mask = 2
 
 [node name="Key" parent="Keys" instance=ExtResource( 6 )]
-position = Vector2( 336, 120 )
+light_mask = 0
+position = Vector2( 335.745, 112.035 )
+z_index = 10
 
 [node name="Key2" parent="Keys" instance=ExtResource( 6 )]
 position = Vector2( 320, 292 )
