@@ -7,7 +7,7 @@ func _ready():
 		spikeArea.position = spike*16
 		$SpikeAreas.add_child(spikeArea)
 	
-	var lavas = get_used_cells_by_id(3)
+	var lavas = get_used_cells_by_id(2)
 	for lava in lavas:
 		var lavaArea = load("res://objects/LavaArea.tscn").instance()
 		lavaArea.position = lava*16

@@ -36,6 +36,7 @@ func _process(delta):
 		$CollisionShape2D.disabled = false
 
 func _on_KeyArea_body_entered(body):
+
 	if body == player && player.keys > 0 && !activated:
 		player.keys -= 1
 		activated = true

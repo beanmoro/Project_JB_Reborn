@@ -37,6 +37,8 @@ func _physics_process(delta):
 		$Sprite.show()
 		process_movement()
 	else:
+		if $Light2D.energy > 0:
+			$Light2D.energy-= 0.01
 		$Sprite.hide()
 
 
@@ -94,6 +96,7 @@ func kill():
 
 func respawn():
 	position = checkpoint_coord
+	$Light2D.energy = 1
 	keys = $"/root/Global".savedkeys
 	var doors = get_tree().get_nodes_in_group("door_group")
 	for door in doors:
