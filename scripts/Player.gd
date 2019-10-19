@@ -5,7 +5,7 @@ const GRAVITY = 25
 const MAX_VSPEED = 1000
 
 #Variables
-var jump_force = 450
+var jump_force = 500
 var speed = 30
 
 var respawn_holder = 0
@@ -96,7 +96,7 @@ func kill():
 
 func respawn():
 	position = checkpoint_coord
-	$Light2D.energy = 1
+	$Light2D.energy = 2.5
 	keys = $"/root/Global".savedkeys
 	var doors = get_tree().get_nodes_in_group("door_group")
 	for door in doors:

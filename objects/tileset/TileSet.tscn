@@ -19,10 +19,10 @@
 [ext_resource path="res://images/sprites/lava_prototype_animation/lava_prototype_9.png" type="Texture" id=17]
 [ext_resource path="res://images/sprites/lava_prototype_animation/lava_prototype_10.png" type="Texture" id=18]
 
-[sub_resource type="RectangleShape2D" id=1]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 7.97848, 8.00073 )
 
-[sub_resource type="OccluderPolygon2D" id=2]
+[sub_resource type="OccluderPolygon2D" id=1]
 polygon = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="CanvasItemMaterial" id=4]
@@ -66,7 +66,8 @@ frame_15/delay_sec = 0.0
 [node name="Tiles" type="Node2D"]
 
 [node name="0" type="Sprite" parent="."]
-modulate = Color( 0.470588, 0.470588, 0.470588, 1 )
+modulate = Color( 0, 0, 0, 1 )
+self_modulate = Color( 0, 0, 0, 1 )
 texture = ExtResource( 1 )
 centered = false
 
@@ -74,10 +75,10 @@ centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="0/StaticBody2D"]
 position = Vector2( 8, 8 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="0"]
-occluder = SubResource( 2 )
+occluder = SubResource( 1 )
 
 [node name="1" type="Sprite" parent="."]
 modulate = Color( 0.470588, 0.470588, 0.470588, 1 )
